@@ -1,0 +1,4 @@
+# this module was added by: git submodule add git@github.com:budparr/gohugo-theme-ananke.git themes/ananke
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = git@github.com:budparr/gohugo-theme-ananke.git

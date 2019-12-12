@@ -1,0 +1,13 @@
+= The Book Title
+
+:toc-title: Table of contents
+:toc: preamble
+:toclevels: 3
+
+:numbered:
+
+include::about.adoc[]
+
+include::chapter1/index.adoc[]
+
+include::chapter2/index.adoc[]

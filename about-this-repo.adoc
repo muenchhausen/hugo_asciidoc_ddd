@@ -1,0 +1,69 @@
+# Some guidance about working this repo
+
+## Folder structure
+
+* document should be structured in sections as it can be reused easily by hugo
+* images should be placed locally within the sections
+* if there are very many images, it is recommended to create an ```images``` folder
+* all documentation and image content must be placed in folder  ```docs```
+* folder  ```hugo``` contains just additional rending meta data for HUGO
+* use readme.adoc just for rendering in code.siemens.com. These files should just contain includes but no content
+* use _index_.adoc just for rendering in hugo. These files should just contain includes but no content.
+
+WARNING: all sections must start with level 3 heading ```###```
+
+
+[source,bash]
+----
+│
+├── docs/                               # the documentation content
+│   ├── <sectionX>/
+│   │   ├── images
+│   │   │   ├── ...
+│   │   ├── <chapterY>.adoc             # starting with level 3 heading
+|   |   ├── readme.adoc                 # for code.siemens.com rendering.
+|   |                                   # May inlude level 2 heading and icludes all files from this folder
+│   ├── <pdf-index-document>.adoc       # index adoc file(s) for PDF documents
+|
+├── hugo/                               # HUGO rendering of docs
+│   ├── <sectionX>/
+│   │   ├── _index.adoc                 # HUGO metadata to render sectionX
+----
+
+
+## Howto to test and run Documentation locally
+
+init / update to latest version
+
+[source]
+----
+git submodule init
+git submodule update --recursive --remote
+----
+
+submodule deinit before commit
+[source]
+----
+git submodule deinit -f --all
+----
+
+download gohugo, run
+
+[source]
+----
+hugo --config ./config.toml --themesDir ./themes --contentDir ./docs -d ./build server
+# go run main.go --config ../../siemens/building360.code.siemens.io/config.toml --themesDir ../../siemens/building360.code.siemens.io/themes/repo-hugo-siemens-theme/themes --contentDir ../../siemens/building360.code.siemens.io/hugoCopy -d ../../siemens/building360.code.siemens.io/build server
+# go run main.go --config ../../prototypes/hugo_asciidoc_ddd/config.toml --themesDir ../../prototypes/hugo_asciidoc_ddd/themes --contentDir ../../prototypes/hugo_asciidoc_ddd/docs -d ../../prototypes/hugo_asciidoc_ddd/build server
+
+----
+
+install asciidoctor, run
+
+[source]
+----
+asciidoctor --require asciidoctor-pdf -v --trace --backend pdf --destination-dir ../build --doctype book --base-dir ./docs -a toc2 -a imagesdir=images@ -a skip-front-matter -a chapter-label="" -a footerRight1="Smart Infrastructure" -a footerRight2="Siemens AG" -a footerLeft1="${MY_VERSION}" -a footerLeft2="${MY_DATE}" -a footerLeft3="${MY_HOME}" -a source-highlighter=coderay -a pdf-stylesdir=./themes -a pdf-fontsdir=./themes/repo-siemens-pdf/themes/siemens-pdf/fonts -a pdf-style=customsiemens ./docs/building360-pdf.adoc
+----
+
+## ToDo
+
+Generate hugo folder from an index or README adoc file!

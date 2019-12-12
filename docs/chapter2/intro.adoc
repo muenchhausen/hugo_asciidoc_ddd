@@ -1,0 +1,7 @@
+=== Introduction Chapter 2
+include::../help/help-intro.adoc[]
+
+this is an intro
+
+* step 1
+* step 2

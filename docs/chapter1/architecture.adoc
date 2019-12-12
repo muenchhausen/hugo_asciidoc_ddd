@@ -1,0 +1,10 @@
+=== Architecture
+
+the architecture of the system
+
+[plantuml]
+----
+class HelloWorld
+----
+
+image::an-image.png[]

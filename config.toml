@@ -1,0 +1,59 @@
+baseURL = "http://localhost"
+
+contentDir = "docs"
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+title = "Hugo Asciidoc Test"
+theme = "ananke"
+
+hasCJKLanguage = true
+metaDataFormat = "yaml"
+
+pygmentsUseClasses = true
+pygmentsCodefences = true
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
+#[asciidoc]
+#    args = ["-r","asciidoctor-diagram"]
+#    asciidoctorRequires = ["asciidoctor-diagram"]
+
+[Params]
+
+    # Souce Code repository section
+    description = "DDD Template"
+    github_repository = "https://github.com/muenchhausen/hugo_asciidoc_ddd"
+    version = "1.0.0"
+
+    # Theme settings section
+    dateformat = "" # default "2 Jan 2006"
+    # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+
+    # path name excluded from documentation menu
+    menu_exclusion = ["archives", "entry", "post", "posts"]
+
+
+# Global menu section
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Chapter 1"
+    url = "/chapter1"
+    weight = 2
+
+[[menu.main]]
+    name = "Chapter 2"
+    url = "/chapter2"
+    weight = 3
+
+[[menu.main]]
+    name = "PDF"
+    url = "http://localhost/book-as-pdf.pdf"
+    weight = 10
+
+[outputs]
+  home = ["HTML", "JSON"]

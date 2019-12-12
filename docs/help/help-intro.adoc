@@ -1,0 +1,12 @@
+[role="help"]
+****
+.Contents
+This chapter introduces the Domain
+
+.Motivation
+It is important for the reader to quickly understand why he should care about.
+
+.Form
+A few lines of short textual description
+
+****
