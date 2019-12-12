@@ -18,6 +18,8 @@ enableMissingTranslationPlaceholders = false
 #[asciidoc]
 #    args = ["-r","asciidoctor-diagram"]
 #    asciidoctorRequires = ["asciidoctor-diagram"]
+asciidoctorArgs = ["--no-header-footer", "-r", "asciidoctor-html5s", "-b", "html5s", "-r", "asciidoctor-diagram"]
+asciidoctorCurrentContent = true
 
 [Params]
 
