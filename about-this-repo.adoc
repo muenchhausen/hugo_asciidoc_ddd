@@ -18,14 +18,14 @@ WARNING: all sections must start with level 3 heading ```###```
 │
 ├── docs/                               # the documentation content
 │   ├── <sectionX>/
-│   │   ├── images
+│   │   ├── images                      # if there are many images, put them into a folder
 │   │   │   ├── ...
 │   │   ├── <chapterY>.adoc             # starting with level 3 heading
 |   |   ├── readme.adoc                 # for code.siemens.com rendering.
 |   |                                   # May inlude level 2 heading and icludes all files from this folder
 │   ├── <pdf-index-document>.adoc       # index adoc file(s) for PDF documents
 |
-├── hugo/                               # HUGO rendering of docs
+├── hugo/                               # HUGO rendering of docs (optional)
 │   ├── <sectionX>/
 │   │   ├── _index.adoc                 # HUGO metadata to render sectionX
 ----
@@ -63,7 +63,3 @@ install asciidoctor, run
 ----
 asciidoctor --require asciidoctor-pdf -v --trace --backend pdf --destination-dir ../build --doctype book --base-dir ./docs -a toc2 -a imagesdir=images@ -a skip-front-matter -a chapter-label="" -a footerRight1="Smart Infrastructure" -a footerRight2="Siemens AG" -a footerLeft1="${MY_VERSION}" -a footerLeft2="${MY_DATE}" -a footerLeft3="${MY_HOME}" -a source-highlighter=coderay -a pdf-stylesdir=./themes -a pdf-fontsdir=./themes/repo-siemens-pdf/themes/siemens-pdf/fonts -a pdf-style=customsiemens ./docs/building360-pdf.adoc
 ----
-
-## ToDo
-
-Generate hugo folder from an index or README adoc file!

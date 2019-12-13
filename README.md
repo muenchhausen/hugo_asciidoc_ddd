@@ -5,3 +5,17 @@ https://github.com/gohugoio/hugo/issues/5695
 
 and pull request
 https://github.com/gohugoio/hugo/pull/6561
+
+Here a Screenshot of
+* Hugo
+* Asciidoctor content
+* usage of local Asciidoctor includes
+* usage of asciidoctor-diagram 
+
+![Screenshot](screenshot.png)
+
+It is required to configure new parameters in `config.toml` : 
+```
+asciidoctorArgs = ["--no-header-footer", "-r", "asciidoctor-html5s", "-b", "html5s", "-r", "asciidoctor-diagram"]
+asciidoctorCurrentContent = true
+```
