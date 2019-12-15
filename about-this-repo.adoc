@@ -52,8 +52,8 @@ download gohugo, run
 [source]
 ----
 hugo --config ./config.toml --themesDir ./themes --contentDir ./docs -d ./build server
-# go run main.go --config ../../siemens/building360.code.siemens.io/config.toml --themesDir ../../siemens/building360.code.siemens.io/themes/repo-hugo-siemens-theme/themes --contentDir ../../siemens/building360.code.siemens.io/hugoCopy -d ../../siemens/building360.code.siemens.io/build server
-# go run main.go --config ../../prototypes/hugo_asciidoc_ddd/config.toml --themesDir ../../prototypes/hugo_asciidoc_ddd/themes --contentDir ../../prototypes/hugo_asciidoc_ddd/docs -d ../../prototypes/hugo_asciidoc_ddd/build server
+# go run main.go -v --config ../../siemens/building360.code.siemens.io/config.toml --themesDir ../../siemens/building360.code.siemens.io/themes/repo-hugo-siemens-theme/themes --contentDir ../../siemens/building360.code.siemens.io/hugoCopy -d ../../siemens/building360.code.siemens.io/build server
+# go run main.go -v --config ../../prototypes/hugo_asciidoc_ddd/config.toml --themesDir ../../prototypes/hugo_asciidoc_ddd/themes --contentDir ../../prototypes/hugo_asciidoc_ddd/docs -d ../../prototypes/hugo_asciidoc_ddd/build server
 # go test -v ./markup/asciidoc/
 ----
 
