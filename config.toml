@@ -15,8 +15,9 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
-asciidoctorArgs = ["--no-header-footer", "-r", "asciidoctor-html5s", "-b", "html5s", "-r", "asciidoctor-diagram"]
-asciidoctorCurrentContent = true
+[asciidoctor]
+    args = ["--no-header-footer", "-r", "asciidoctor-html5s", "-b", "html5s", "-r", "asciidoctor-diagram"]
+    currentContent = true
 
 [module]
 [module.hugoVersion]
