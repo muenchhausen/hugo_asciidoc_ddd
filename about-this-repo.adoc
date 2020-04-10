@@ -51,15 +51,14 @@ download gohugo, run
 
 [source]
 ----
-hugo --config ./config.toml --themesDir ./themes --contentDir ./docs -d ./build server
-# go run main.go -v --config ../../siemens/building360.code.siemens.io/config.toml --themesDir ../../siemens/building360.code.siemens.io/themes/repo-hugo-siemens-theme/themes --contentDir ../../siemens/building360.code.siemens.io/hugoCopy -d ../../siemens/building360.code.siemens.io/build server
+# workaround:
+hugo mod init ugly-dummy
+
+hugo server
+
+# or
+hugo -v --config ./config.toml --themesDir ./themes --contentDir ./docs -d ./build server
+
 # go run main.go -v --config ../../prototypes/hugo_asciidoc_ddd/config.toml --themesDir ../../prototypes/hugo_asciidoc_ddd/themes --contentDir ../../prototypes/hugo_asciidoc_ddd/docs -d ../../prototypes/hugo_asciidoc_ddd/build server
 # go test -v ./markup/asciidoc/
-----
-
-install asciidoctor, run
-
-[source]
-----
-asciidoctor --require asciidoctor-pdf -v --trace --backend pdf --destination-dir ../build --doctype book --base-dir ./docs -a toc2 -a imagesdir=images@ -a skip-front-matter -a chapter-label="" -a footerRight1="Smart Infrastructure" -a footerRight2="Siemens AG" -a footerLeft1="${MY_VERSION}" -a footerLeft2="${MY_DATE}" -a footerLeft3="${MY_HOME}" -a source-highlighter=coderay -a pdf-stylesdir=./themes -a pdf-fontsdir=./themes/repo-siemens-pdf/themes/siemens-pdf/fonts -a pdf-style=customsiemens ./docs/building360-pdf.adoc
 ----

@@ -7,4 +7,11 @@ the architecture of the system
 class HelloWorld
 ----
 
+[graphviz, example, svg]
+....
+digraph G {
+  foo -> bar;
+}
+....
+
 image::an-image.png[]
