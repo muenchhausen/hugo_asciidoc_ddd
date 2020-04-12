@@ -54,7 +54,7 @@ download gohugo, run
 # workaround:
 hugo mod init ugly-dummy
 
-hugo server
+hugo -v -d ./build server
 
 # or
 hugo -v --config ./config.toml --themesDir ./themes --contentDir ./docs -d ./build server

@@ -22,6 +22,11 @@ It is required to configure new parameters in `config.toml` :
     workingFolderCurrent = true
 ```
 
+Run Hugo with parameter `--destination`:
+```
+hugo -v -d ./build server
+```
+
 This repo is tested on macOS and Windows with
 
 * asciidoctor (2.0.10, 1.5.8)
