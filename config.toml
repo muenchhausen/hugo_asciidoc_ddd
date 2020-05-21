@@ -16,8 +16,10 @@ defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
 [markup.asciidocext]
-    args = ["--no-header-footer", "-r", "asciidoctor-html5s", "-b", "html5s", "-r", "asciidoctor-diagram"]
+    extensions = ["asciidoctor-html5s", "asciidoctor-diagram"]
+    backend = "html5s"
     workingFolderCurrent = true
+    trace = true
 
 [module]
 [module.hugoVersion]
