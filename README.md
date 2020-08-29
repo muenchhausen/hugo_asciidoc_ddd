@@ -15,6 +15,11 @@ Here a Screenshot of
 
 ![Screenshot](screenshot.png)
 
+```
+git submodule update --init --recursive
+export PATH=$PATH:~/prototypes/hugo
+hugo mod get -u
+```
 It is required to configure new parameters in `config.toml` : 
 ```
 [markup.asciidocext]
