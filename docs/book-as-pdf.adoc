@@ -8,6 +8,11 @@
 
 include::about.adoc[]
 
+WARNING: The following image `This is an Image` will be rendered correctly within Hugo and as PDF.
+Rendering this PDF document in Hugo will fail because imagesdir is overwritten in the next line. This needs to solved.
+
+:imagesdir: chapter1
 include::chapter1/index.adoc[]
 
+:imagesdir: chapter2
 include::chapter2/index.adoc[]

@@ -59,14 +59,24 @@ enableMissingTranslationPlaceholders = false
     url = "/chapter2"
     weight = 3
 
-[[menu.main]]
-    name = "Chapter 3"
-    url = "/chapter3"
-    weight = 3
+#[[menu.main]]
+#    name = "Chapter 3"
+#    url = "/chapter3"
+#    weight = 3
 
 [[menu.main]]
-    name = "PDF"
-    url = "http://localhost/book-as-pdf.pdf"
+    name = "TOC sample"
+    url = "/tocsample"
+    weight = 4
+
+[[menu.main]]
+    name = "Book as PDF"
+    url = "http://localhost:1313/book-as-pdf.pdf"
+    weight = 10
+
+[[menu.main]]
+    name = "Book as HTML (wrong imagesdir)"
+    url = "/book-as-pdf"
     weight = 10
 
 [outputs]
