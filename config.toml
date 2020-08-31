@@ -4,7 +4,7 @@ contentDir = "docs"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "Hugo Asciidoc Test"
-theme = "ananke"
+theme = "zdoc"
 
 hasCJKLanguage = true
 metaDataFormat = "yaml"
@@ -17,9 +17,15 @@ enableMissingTranslationPlaceholders = false
 
 [markup.asciidocext]
     extensions = ["asciidoctor-html5s", "asciidoctor-diagram"]
-    backend = "html5s"
+#    backend = "html5s"
     workingFolderCurrent = true
     trace = true
+
+[markup]
+    [markup.tableOfContent]
+        endLevel = 3
+        ordered = false
+        startLevel = 2
 
 #[module]
 #[[module.imports]]
@@ -42,6 +48,9 @@ enableMissingTranslationPlaceholders = false
     # path name excluded from documentation menu
     menu_exclusion = ["archives", "entry", "post", "posts"]
 
+    themeOptions = ["light", "dark"]
+    enableNavbar = true
+    enableToc = true
 
 # Global menu section
 [[menu.main]]
